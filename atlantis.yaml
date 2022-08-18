@@ -1,0 +1,13 @@
+version: 3
+projects:
+- name: terraform-module
+  dir: ./terraform-module
+  workflow: terraform-module-workflow
+workflows:
+  terraform-module-workflow:
+    plan:
+      steps:
+        run: echo "Atlantis Plan!"
+    apply:
+      steps:
+        run: echo "Atlantis Apply!"
